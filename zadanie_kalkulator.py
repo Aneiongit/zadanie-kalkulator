@@ -1,4 +1,3 @@
-import sys
 import logging
 logging.basicConfig(level=logging.DEBUG)
 
@@ -28,22 +27,22 @@ if __name__ == "__main__":
 
     choice = input("Podaj dzialanie, poslugujac sie odpowiednia liczba (1/2/3/4): ")
 
-    num1 = int(input("Podaj pierwsza liczbe: "))
-    num2 = int(input("Podaj druga liczbe: "))
+    num1 = float(input("Podaj pierwsza liczbe: "))
+    num2 = float(input("Podaj druga liczbe: "))
 
     if choice == '1':
-        logging.debug("Dodaje", num1, 'i', num2)
+        logging.info("Dodaje %s i %s" % (num1, num2))
         print("Wynik to:", add(num1, num2))
 
     elif choice == '2':
-        logging.debug("Odejmuje", num1, 'i', num2)
+        logging.info("Odejmuje %s i %s" % (num1, num2))
         print("Wynik to:", subtract(num1, num2))
 
     elif choice == '3':
-        logging.debug("Mnoze", num1, 'i', num2)
+        logging.info("Mnoze %s i %s" % (num1, num2))
         print("Wynik to:", multiply(num1, num2))
 
     elif choice == '4':
-        logging.debug("Dziele", num1, 'i', num2)
+        logging.info("Dziele %s i %s" % (num1, num2))
         print("Wynik to:", divide(num1, num2))
     exit(0)
