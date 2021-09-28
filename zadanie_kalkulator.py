@@ -17,6 +17,9 @@ def multiply(x, y):
 def divide(x, y):
     return x / y
 
+def power(x, y):
+    return x** y
+
 
 if __name__ == "__main__":
     print("Mini kalkulator.")
@@ -24,8 +27,9 @@ if __name__ == "__main__":
     print("2 Odejmowanie")
     print("3 Mnozenie")
     print("4 Dzielenie")
+    print("5 Potegowanie")
 
-    choice = input("Podaj dzialanie, poslugujac sie odpowiednia liczba (1/2/3/4): ")
+    choice = input("Podaj dzialanie, poslugujac sie odpowiednia liczba (1/2/3/4/5): ")
 
     num1 = float(input("Podaj pierwsza liczbe: "))
     num2 = float(input("Podaj druga liczbe: "))
@@ -45,4 +49,7 @@ if __name__ == "__main__":
     elif choice == '4':
         logging.info("Dziele %s i %s" % (num1, num2))
         print("Wynik to:", divide(num1, num2))
+    elif choice == '5':
+        logging.info("Poteguje %s do %s" % (num1, num2))
+        print("Wynik to:", power(num1, num2))
     exit(0)
