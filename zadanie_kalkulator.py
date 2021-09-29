@@ -34,22 +34,13 @@ if __name__ == "__main__":
     num1 = float(input("Podaj pierwsza liczbe: "))
     num2 = float(input("Podaj druga liczbe: "))
 
-    if choice == '1':
-        logging.info("Dodaje %s i %s" % (num1, num2))
-        print("Wynik to:", add(num1, num2))
+    def operation(choice):
+        return {
+            '1': num1 + num2,
+            '2': num1 - num2,
+            '3': num1 * num2,
+            '4': num1 / num2,
+            '5': num1 ** num2
+                }[choice]
 
-    elif choice == '2':
-        logging.info("Odejmuje %s i %s" % (num1, num2))
-        print("Wynik to:", subtract(num1, num2))
-
-    elif choice == '3':
-        logging.info("Mnoze %s i %s" % (num1, num2))
-        print("Wynik to:", multiply(num1, num2))
-
-    elif choice == '4':
-        logging.info("Dziele %s i %s" % (num1, num2))
-        print("Wynik to:", divide(num1, num2))
-    elif choice == '5':
-        logging.info("Poteguje %s do %s" % (num1, num2))
-        print("Wynik to:", power(num1, num2))
-    exit(0)
+    print(operation(choice))
