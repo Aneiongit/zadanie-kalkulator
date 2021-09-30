@@ -12,7 +12,7 @@ def deduct(x, y):
     return x - y
 
 
-def multi(x, y):
+def multiply(x, y):
     logging.info("Mnoze %s i %s" % (num1, num2))
     return x * y
 
@@ -31,7 +31,7 @@ def operation(action):
     return {
         '1': add,
         '2': deduct,
-        '3': multi,
+        '3': multiply,
         '4': divide,
         '5': power
     }[action](num1, num2)
