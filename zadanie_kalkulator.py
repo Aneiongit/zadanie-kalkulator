@@ -13,7 +13,7 @@ def deduct(x, y):
 
 
 def multi(x, y):
-    logging.info("Monoze %s i %s" % (num1, num2))
+    logging.info("Mnoze %s i %s" % (num1, num2))
     return x * y
 
 
