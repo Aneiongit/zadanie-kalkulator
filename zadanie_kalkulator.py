@@ -3,22 +3,38 @@ logging.basicConfig(level=logging.DEBUG)
 
 
 def add(x, y):
+    logging.info("Dodaje %s i %s" % (num1, num2))
     return x + y
 
 
-def subtract(x, y):
+def deduct(x, y):
+    logging.info("Odejmuje %s i %s" % (num1, num2))
     return x - y
 
 
-def multiply(x, y):
+def multi(x, y):
+    logging.info("Monoze %s i %s" % (num1, num2))
     return x * y
 
 
 def divide(x, y):
+    logging.info("Dziele %s i %s" % (num1, num2))
     return x / y
 
+
 def power(x, y):
+    logging.info("Poteguje %s i %s" % (num1, num2))
     return x ** y
+
+
+def operation(action):
+    return {
+        '1': add,
+        '2': deduct,
+        '3': multi,
+        '4': divide,
+        '5': power
+    }[action](num1, num2)
 
 
 if __name__ == "__main__":
@@ -33,14 +49,5 @@ if __name__ == "__main__":
 
     num1 = float(input("Podaj pierwsza liczbe: "))
     num2 = float(input("Podaj druga liczbe: "))
-
-    def operation(choice):
-        return {
-            '1': num1 + num2,
-            '2': num1 - num2,
-            '3': num1 * num2,
-            '4': num1 / num2,
-            '5': num1 ** num2
-                }[choice]
 
     print(operation(choice))
