@@ -34,7 +34,7 @@ def operation(action):
         '3': multiply,
         '4': divide,
         '5': power
-    }[action](num1, num2)
+    }[action]
 
 
 if __name__ == "__main__":
@@ -50,4 +50,4 @@ if __name__ == "__main__":
     num1 = float(input("Podaj pierwsza liczbe: "))
     num2 = float(input("Podaj druga liczbe: "))
 
-    print(operation(choice))
+    print(operation(choice)(num1, num2))
